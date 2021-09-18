@@ -53,38 +53,48 @@ console.log(sort2(array));
   }
 }*/
 
-/*const total = (((array.length + 1) * array.length) / 2) * 2;
-console.log(total);*/
 
-const array = [5, 8, 10, 15, 7, 9, 13, 12, 14, 6];
-/*let n = 5;
+/*const array = [5, 8, 10, 15, 7, 9, 13, 12, 14, 6];
+let n = 5;
 let m = 15;*/
 
-/*while (n++ < m) {
-  if (!array.includes(n)) {
-    console.log(n);
+/*function f(arr) {
+  let t = 0;
+  let sum = ((n + m) * (m - n + 1)) / 2;
+  while (arr.length > t) {
+    let temp = array[t];
+    sum -= temp;
+    t++;
   }
-}*/
+  return sum;
+}
+console.log(f(array));
 
-let missingNumbers = (a) =>
-  Array.from(Array(Math.max(...a)).keys())
-    .map((n, i) => (a.indexOf(i) < 0 ? i : null))
-    .filter((f) => f);
-
-console.log(missingNumbers(array));
-
-function findNumber(arr) {
-  let n = arr.length;
-  let total = ((n + 2) * (n + 1)) / 2;
-  for (let i = 0; i < arr.length; i++) {
-    total -= arr[i];
+const f1 = (arr) => {
+  while (n++ < m) {
+    if (!arr.includes(n)) {
+      return n;
+    }
   }
-  return total;
+};
+console.log(f1(array));*/
+
+const array = [5,8,10,15,7,9,13,12,14,6];
+
+
+let n = 5
+let m = 15
+result = 0
+const findmum = (array)=>{
+  let i = 0
+  while(n<m) {
+    debugger
+    result = result + n - array [i]
+    console.log(result)
+    n++
+    i++
+  }
+  return m + result
 }
 
-findNumber(array); // 9
-console.log(findNumber(array));
-
-Array.from({ length: Math.max(...b) }, (_, x) =>
-  !b.includes(x + 1) ? x + 1 : false
-).filter(Boolean);
+console.log(findmum(array))
