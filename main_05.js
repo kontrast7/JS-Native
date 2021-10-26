@@ -79,6 +79,7 @@ const f1 = (arr) => {
 };
 console.log(f1(array));*/
 
+/*
 const array = [5,8,10,15,7,9,13,12,14,6];
 
 
@@ -97,4 +98,5 @@ const findmum = (array)=>{
   return m + result
 }
 
-console.log(findmum(array))
+console.log(findmum(array))*/
+
